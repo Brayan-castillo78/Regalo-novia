@@ -1,0 +1,1141 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>15 cartas para ti 💗</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&family=Parisienne&display=swap');
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #3d2d2d;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(255,190,202,.22), transparent 25%),
+    radial-gradient(circle at 90% 20%, rgba(255,214,218,.25), transparent 24%),
+    #fffaf7;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6%;
+  border-bottom: 1px solid #f0dedc;
+  background: rgba(255,250,247,.92);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Parisienne", cursive;
+  font-size: 27px;
+  line-height: .8;
+}
+
+.brand-heart {
+  font-family: sans-serif;
+  color: #ee8798;
+  font-size: 32px;
+}
+
+nav {
+  display: flex;
+  gap: 34px;
+  font-size: 14px;
+}
+
+nav a {
+  color: #5d4b4b;
+  text-decoration: none;
+  transition: .2s;
+}
+
+nav a:hover {
+  color: #e97e91;
+}
+
+nav a.active {
+  color: #e97e91;
+  border-bottom: 2px solid #e97e91;
+  padding-bottom: 7px;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+main {
+  max-width: 1180px;
+  margin: auto;
+  padding: 62px 24px 80px;
+}
+
+.hero {
+  text-align: center;
+}
+
+.eyebrow {
+  color: #e78396;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 8px 0 10px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(48px, 7vw, 76px);
+  font-weight: 600;
+}
+
+.subtitle {
+  margin: 0;
+  color: #705e5e;
+  font-size: 16px;
+}
+
+.divider {
+  margin: 25px auto 48px;
+  color: #ed94a2;
+  font-size: 24px;
+}
+
+/* =========================
+   GALERÍA DE CARTAS
+========================= */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.card {
+  border: 1px solid #eadbd7;
+  background: rgba(255,255,255,.75);
+  border-radius: 15px;
+  padding: 14px 14px 18px;
+  box-shadow: 0 8px 25px rgba(102,67,67,.07);
+  cursor: pointer;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card:hover {
+  transform: translateY(-7px) rotate(-.4deg);
+  box-shadow: 0 14px 32px rgba(102,67,67,.15);
+}
+
+/* =========================
+   DISEÑOS DE SOBRES
+========================= */
+
+.envelope {
+  height: 178px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(150,90,90,.12);
+}
+
+/* 1 - Rosa */
+.design-1 {
+  background: linear-gradient(145deg,#f8d8dc,#efb9c3);
+}
+
+/* 2 - Crema */
+.design-2 {
+  background: linear-gradient(145deg,#fff7e8,#ead7b8);
+}
+
+/* 3 - Lila */
+.design-3 {
+  background: linear-gradient(145deg,#e8dbf0,#cdb5dc);
+}
+
+/* 4 - Verde */
+.design-4 {
+  background: linear-gradient(145deg,#dceee9,#b9d9d1);
+}
+
+/* 5 - Durazno */
+.design-5 {
+  background: linear-gradient(145deg,#f5dfc9,#dfb98f);
+}
+
+/* 6 - Rosado suave */
+.design-6 {
+  background: linear-gradient(145deg,#f4e7d9,#f8d2c9);
+}
+
+/* 7 - Celeste */
+.design-7 {
+  background: linear-gradient(145deg,#dcecf4,#b7d4e3);
+}
+
+/* 8 - Vino suave */
+.design-8 {
+  background: linear-gradient(145deg,#e8c9d0,#c995a3);
+}
+
+/* Bordes decorativos */
+
+.design-1::before,
+.design-2::before,
+.design-3::before,
+.design-4::before,
+.design-5::before,
+.design-6::before,
+.design-7::before,
+.design-8::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 1px dashed rgba(110,75,75,.22);
+  border-radius: 5px;
+}
+
+/* Triángulo del sobre */
+
+.flap {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,.25);
+  clip-path: polygon(0 0, 100% 0, 50% 55%);
+}
+
+/* =========================
+   DECORACIONES
+========================= */
+
+.seal {
+  position: absolute;
+  bottom: 24px;
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #ed8194;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(120,60,60,.2);
+  z-index: 3;
+}
+
+/* Sellos de distintos colores */
+
+.design-3 .seal {
+  background: #9c78b3;
+}
+
+.design-4 .seal {
+  background: #70a99b;
+}
+
+.design-5 .seal {
+  background: #bd825e;
+}
+
+.design-7 .seal {
+  background: #709eb5;
+}
+
+.design-8 .seal {
+  background: #a96072;
+}
+
+/* Flores */
+
+.flower {
+  position: absolute;
+  top: 12px;
+  right: 23px;
+  font-size: 42px;
+  transform: rotate(-10deg);
+  z-index: 2;
+}
+
+/* Notita */
+
+.mini-note {
+  position: absolute;
+  left: 20px;
+  top: 24px;
+  background: #fffdf8;
+  padding: 10px 13px;
+  transform: rotate(-7deg);
+  font-family: "Parisienne", cursive;
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(80,50,40,.12);
+  z-index: 3;
+}
+
+/* Cinta */
+
+.ribbon {
+  position: absolute;
+  width: 100%;
+  height: 18px;
+  background: rgba(255,255,255,.38);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.ribbon.vertical {
+  width: 18px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+/* Sello postal */
+
+.stamp {
+  position: absolute;
+  left: 15px;
+  top: 14px;
+  width: 43px;
+  height: 43px;
+  border: 2px solid rgba(100,70,70,.28);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  transform: rotate(-12deg);
+  background: rgba(255,255,255,.28);
+  z-index: 3;
+}
+
+/* Corazón grande */
+
+.big-heart {
+  position: absolute;
+  font-size: 70px;
+  opacity: .25;
+  color: white;
+}
+
+/* Estrellitas */
+
+.stars {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+  font-size: 22px;
+  letter-spacing: 5px;
+  color: rgba(255,255,255,.8);
+}
+
+/* Postalcita */
+
+.postcard {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 57px;
+  height: 43px;
+  background: rgba(255,255,255,.68);
+  border: 1px solid rgba(100,70,70,.16);
+  transform: rotate(7deg);
+  font-size: 9px;
+  display: grid;
+  place-items: center;
+  color: #8c6c6c;
+  z-index: 3;
+}
+
+/* Título */
+
+.card-title {
+  text-align: center;
+  margin-top: 14px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.tiny-heart {
+  text-align: center;
+  color: #ed8194;
+  margin-top: 4px;
+}
+
+/* =========================
+   SECCIÓN NOSOTROS
+========================= */
+
+#nosotros {
+  margin-top: 100px;
+  padding-top: 70px;
+  border-top: 1px solid #f0dedc;
+}
+
+.nosotros-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.nosotros-header h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 55px;
+  margin: 8px 0;
+  font-weight: 600;
+}
+
+.nosotros-header p {
+  color: #806d6d;
+}
+
+/* Galería de fotos */
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+/* Marco */
+
+.photo-frame {
+  background: #fffdf9;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 10px 28px rgba(100,65,65,.12);
+  border: 1px solid #eadbd7;
+  transition: .25s;
+}
+
+.photo-frame:hover {
+  transform: translateY(-6px) rotate(1deg);
+  box-shadow: 0 15px 35px rgba(100,65,65,.17);
+}
+
+.photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background:
+    linear-gradient(135deg, #f7d9dc, #f9eee9);
+  border: 1px dashed #dca9af;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #a17d7d;
+  overflow: hidden;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Variaciones de marcos */
+
+.photo-frame:nth-child(2n) {
+  transform: rotate(1.5deg);
+}
+
+.photo-frame:nth-child(3n) {
+  background: #fff8ed;
+}
+
+.photo-frame:nth-child(4n) {
+  background: #fdf1f3;
+}
+
+.photo-caption {
+  text-align: center;
+  font-family: "Parisienne", cursive;
+  font-size: 21px;
+  margin-top: 10px;
+  color: #765b5b;
+}
+
+/* =========================
+   MODAL DE CARTA
+========================= */
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(48,31,31,.48);
+  z-index: 30;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.letter {
+  width: min(620px,100%);
+  max-height: 90vh;
+  overflow: auto;
+  background: #fffaf2;
+  border-radius: 20px;
+  padding: 38px;
+  box-shadow: 0 25px 70px rgba(40,20,20,.3);
+  position: relative;
+  animation: aparecer .35s ease;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.close {
+  position: absolute;
+  right: 18px;
+  top: 15px;
+  border: 0;
+  background: transparent;
+  font-size: 25px;
+  cursor: pointer;
+  color: #8b7070;
+}
+
+.letter h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 38px;
+  margin: 0 0 18px;
+}
+
+.letter p {
+  line-height: 1.8;
+  color: #5e4b4b;
+  white-space: pre-line;
+}
+
+.signature {
+  font-family: "Parisienne", cursive;
+  font-size: 28px;
+  margin-top: 25px;
+  color: #e47d90;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  text-align: center;
+  padding: 65px 20px;
+  margin-top: 70px;
+  background: linear-gradient(180deg, transparent, #fce9e8);
+}
+
+footer .script {
+  font-family: "Parisienne", cursive;
+  font-size: 29px;
+}
+
+footer p {
+  color: #876f6f;
+  margin-top: 7px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+  .gallery {
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  .photo-gallery {
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  nav {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 650px) {
+
+  header {
+    padding: 0 18px;
+  }
+
+  nav {
+    gap: 10px;
+  }
+
+  nav a:nth-child(1),
+  nav a:nth-child(3),
+  nav a:nth-child(4) {
+    display: none;
+  }
+
+  main {
+    padding-top: 40px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2,1fr);
+    gap: 12px;
+  }
+
+  .photo-gallery {
+    grid-template-columns: repeat(2,1fr);
+    gap: 14px;
+  }
+
+  .envelope {
+    height: 145px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .letter {
+    padding: 30px 24px;
+  }
+
+  .nosotros-header h2 {
+    font-size: 45px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+  <div class="brand">
+    <span class="brand-heart">♡</span>
+
+    <span>
+      Para mi<br>
+      amor
+    </span>
+  </div>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a class="active" href="#cartas">Cartas</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#momentos">Momentos</a>
+    <a href="#para-ti">Para ti</a>
+  </nav>
+
+  <div style="font-size:27px;color:#ee8798">
+    ♥
+  </div>
+
+</header>
+
+
+<!-- =========================
+     CONTENIDO
+========================= -->
+
+<main id="inicio">
+
+  <!-- HERO -->
+
+  <section class="hero" id="cartas">
+
+    <div class="eyebrow">
+      Un pequeño rincón para ti
+    </div>
+
+    <h1>
+      15 cartas para ti
+    </h1>
+
+    <p class="subtitle">
+      Quince pequeños mensajes que guardan un pedacito de mi cariño.
+    </p>
+
+    <div class="divider">
+      ♡ ───── ♥ ───── ♡
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CARTAS
+  ========================= -->
+
+  <section class="gallery" id="gallery"></section>
+
+
+  <!-- =========================
+       NOSOTROS
+  ========================= -->
+
+  <section id="nosotros">
+
+    <div class="nosotros-header">
+
+      <div class="eyebrow">
+        Nuestros recuerdos
+      </div>
+
+      <h2>
+        Nosotros ♡
+      </h2>
+
+      <p>
+        Algunos momentos que quiero guardar para siempre.
+      </p>
+
+      <div class="divider">
+        ♡ ───── ✿ ───── ♡
+      </div>
+
+    </div>
+
+
+    <div class="photo-gallery">
+
+      <!-- FOTO 1 -->
+      <div class="photo-frame">
+        <div class="photo">
+          <img src="./fotos/foto1.jpeg" alt="Nuestro recuerdo">
+        </div>
+        <div class="photo-caption">
+          Nuestro primer recuerdo ♡
+        </div>
+      </div>
+
+      <!-- FOTO 2 -->
+      <div class="photo-frame">
+        <div class="photo">
+          <img src="./fotos/foto2.jpeg" alt="Nuestro recuerdo">
+        </div>
+        <div class="photo-caption">
+          Un día bonito
+        </div>
+      </div>
+
+      <!-- FOTO 3 -->
+      <div class="photo-frame">
+        <div class="photo">
+          <img src="./fotos/foto3.jpeg" alt="Nuestro recuerdo">
+        </div>
+        <div class="photo-caption">
+          Una sonrisa
+        </div>
+      </div>
+
+      <!-- FOTO 4 -->
+      <div class="photo-frame">
+        <div class="photo">
+          <img src="./fotos/foto4.jpeg" alt="Nuestro recuerdo">
+        </div>
+        <div class="photo-caption">
+          Ese momento ♡
+        </div>
+      </div>
+
+      <!-- FOTO 5 -->
+      <div class="photo-frame">
+        <div class="photo">
+          <img src="./fotos/foto5.jpeg" alt="Nuestro recuerdo">
+        </div>
+        <div class="photo-caption">
+          Una aventura
+        </div>
+      </div>
+
+      <!-- FOTO 6 -->
+      <div class="photo-frame">
+        <div class="photo">
+          <img src="./fotos/foto6.jpeg" alt="Nuestro recuerdo">
+        </div>
+        <div class="photo-caption">
+          Juntos
+        </div>
+      </div>
+
+      <!-- FOTO 7 -->
+      <div class="photo-frame">
+        <div class="photo">
+          <img src="./fotos/foto7.jpeg" alt="Nuestro recuerdo">
+        </div>
+        <div class="photo-caption">
+          Un recuerdo especial
+        </div>
+      </div>
+
+      <!-- FOTO 8 -->
+      <div class="photo-frame">
+        <div class="photo">
+          <img src="./fotos/foto8.jpeg" alt="Nuestro recuerdo">
+        </div>
+        <div class="photo-caption">
+          Una tarde bonita
+        </div>
+      </div>
+
+      <!-- FOTO 9 -->
+      <div class="photo-frame">
+        <div class="photo">
+          <img src="./fotos/foto9.jpeg" alt="Nuestro recuerdo">
+        </div>
+        <div class="photo-caption">
+          Una aventura más
+        </div>
+      </div>
+
+      <!-- FOTO 10 -->
+      <div class="photo-frame">
+        <div class="photo">
+          <img src="./fotos/foto10.jpeg" alt="Nuestro recuerdo">
+        </div>
+        <div class="photo-caption">
+          Siempre contigo
+        </div>
+      </div>
+
+      <!-- FOTO 11 -->
+      <div class="photo-frame">
+        <div class="photo">
+          <img src="./fotos/foto11.jpeg" alt="Nuestro recuerdo">
+        </div>
+        <div class="photo-caption">
+          Otro recuerdo ♡
+        </div>
+      </div>
+
+      <!-- FOTO 12 -->
+      <div class="photo-frame">
+        <div class="photo">
+          <img src="./fotos/foto12.jpeg" alt="Nuestro recuerdo">
+        </div>
+        <div class="photo-caption">
+          Para recordar
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Espacios para futuras secciones -->
+
+  <section id="momentos" style="height:1px;"></section>
+  <section id="para-ti" style="height:1px;"></section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <div class="script">
+    Cada carta guarda un pedacito de cariño para ti.
+  </div>
+
+  <p>
+    Gracias por ser una persona tan especial. ♡
+  </p>
+
+</footer>
+
+
+<!-- =========================
+     MODAL
+========================= -->
+
+<div class="modal" id="modal">
+
+  <article class="letter">
+
+    <button class="close" onclick="closeLetter()">
+      ×
+    </button>
+
+    <div class="eyebrow" id="letterNumber"></div>
+
+    <h2 id="letterTitle"></h2>
+
+    <p id="letterText"></p>
+
+    <div class="signature">
+      Con cariño ♡
+    </div>
+
+  </article>
+
+</div>
+
+
+<script>
+
+/* =========================
+   CARTAS
+========================= */
+
+const cartas = [
+
+  [
+    "Por tu sonrisa",
+    "Hay sonrisas que simplemente hacen que un día normal se sienta un poquito más bonito. La tuya es una de ellas."
+  ],
+
+  [
+    "Por cómo me miras",
+    "A veces una mirada dice muchísimo sin necesitar ninguna palabra. Gracias por esos pequeños momentos que se quedan conmigo."
+  ],
+
+  [
+    "Por tu corazón",
+    "Admiro la forma en que eres tú misma y la manera en que haces sentir especiales a las personas que quieres."
+  ],
+
+  [
+    "Por tu risa",
+    "Tu risa tiene esa capacidad de convertir cualquier momento sencillo en un recuerdo bonito."
+  ],
+
+  [
+    "Por tu apoyo",
+    "Gracias por estar en los momentos buenos y por hacer que los días difíciles se sientan un poquito más llevaderos."
+  ],
+
+  [
+    "Por estar siempre",
+    "Hay detalles que parecen pequeños, pero significan muchísimo. Gracias por cada vez que has estado ahí."
+  ],
+
+  [
+    "Por nuestra conexión",
+    "Me encanta poder compartir conversaciones, bromas y momentos que solo nosotros entendemos."
+  ],
+
+  [
+    "Por tus abrazos",
+    "Hay momentos en los que un abrazo dice más que mil palabras. Gracias por todos esos momentos de calma y cariño."
+  ],
+
+  [
+    "Por los momentos",
+    "Los recuerdos más bonitos muchas veces nacen de cosas sencillas. Me quedo con cada momento especial que hemos compartido."
+  ],
+
+  [
+    "Por tu ternura",
+    "Tu forma de cuidar los pequeños detalles hace que muchas cosas se sientan más bonitas."
+  ],
+
+  [
+    "Por tus detalles",
+    "Me encantan esos pequeños gestos que quizá parecen insignificantes, pero que hacen una gran diferencia."
+  ],
+
+  [
+    "Por nuestra historia",
+    "Nuestra historia está hecha de momentos, conversaciones, risas y recuerdos que hacen que todo esto sea especial."
+  ],
+
+  [
+    "Por tu paciencia",
+    "Gracias por comprender, escuchar y dar espacio para que podamos seguir aprendiendo juntos."
+  ],
+
+  [
+    "Por tu luz",
+    "Tienes una forma muy tuya de hacer que los lugares y los momentos tengan algo especial."
+  ],
+
+  [
+    "Por ser tú",
+    "No necesitas cambiar nada para ser especial. Gracias simplemente por ser la persona que eres."
+  ]
+
+];
+
+
+/* =========================
+   CREAR CARTAS
+========================= */
+
+const gallery = document.getElementById("gallery");
+
+cartas.forEach((c, i) => {
+
+  const card = document.createElement("article");
+
+  card.className = "card";
+
+  const design = (i % 8) + 1;
+
+  const flower =
+    [0,3,7,9,12].includes(i)
+    ? '<div class="flower">✿</div>'
+    : '';
+
+  const note =
+    [2,5,8,11,14].includes(i)
+    ? '<div class="mini-note">para ti ♡</div>'
+    : '';
+
+  const ribbon =
+    [1,4,10].includes(i)
+    ? '<div class="ribbon"></div><div class="ribbon vertical"></div>'
+    : '';
+
+  const stamp =
+    [2,6,13].includes(i)
+    ? '<div class="stamp">♡</div>'
+    : '';
+
+  const postcard =
+    [5,8,11].includes(i)
+    ? '<div class="postcard">♥ recuerdos</div>'
+    : '';
+
+  const heart =
+    [6,13].includes(i)
+    ? '<div class="big-heart">♥</div>'
+    : '';
+
+  const stars =
+    [3,9].includes(i)
+    ? '<div class="stars">✦ ✧</div>'
+    : '';
+
+  card.innerHTML = `
+
+    <div class="envelope design-${design}">
+
+      <div class="flap"></div>
+
+      ${ribbon}
+      ${stamp}
+      ${postcard}
+      ${flower}
+      ${note}
+      ${heart}
+      ${stars}
+
+      <div class="seal">
+        ${i + 1}
+      </div>
+
+    </div>
+
+    <div class="card-title">
+      ${c[0]}
+    </div>
+
+    <div class="tiny-heart">
+      ♡
+    </div>
+
+  `;
+
+  card.onclick = () => openLetter(i);
+
+  gallery.appendChild(card);
+
+});
+
+
+/* =========================
+   ABRIR CARTA
+========================= */
+
+function openLetter(i) {
+
+  document.getElementById("letterNumber").textContent =
+    "CARTA " + String(i + 1).padStart(2, "0");
+
+  document.getElementById("letterTitle").textContent =
+    cartas[i][0];
+
+  document.getElementById("letterText").textContent =
+    cartas[i][1];
+
+  document.getElementById("modal").classList.add("open");
+}
+
+
+/* =========================
+   CERRAR CARTA
+========================= */
+
+function closeLetter() {
+
+  document.getElementById("modal").classList.remove("open");
+
+}
+
+
+/* Cerrar haciendo clic fuera */
+
+document.getElementById("modal").addEventListener("click", e => {
+
+  if (e.target.id === "modal") {
+    closeLetter();
+  }
+
+});
+
+
+/* Cerrar con ESC */
+
+document.addEventListener("keydown", e => {
+
+  if (e.key === "Escape") {
+    closeLetter();
+  }
+
+});
+
+</script>
+
+</body>
+</html>
+
